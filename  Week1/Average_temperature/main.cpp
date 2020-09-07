@@ -8,6 +8,8 @@ int main() {
     vector<int32_t> temperatureDays;
     int32_t temperature;
     int64_t sum = 0;
+    int32_t countTemp = 0;
+
     cin >> numberDays;
     while (numberDays-- > 0) {
         cin >> temperature;
@@ -15,7 +17,6 @@ int main() {
         sum += temperature;
     }
     sum /= static_cast<int64_t>(temperatureDays.size());
-    int32_t countTemp = 0;
     for (auto temp : temperatureDays) {
         if (temp > sum)
             ++countTemp;
